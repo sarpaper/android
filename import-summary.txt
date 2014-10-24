@@ -1,0 +1,103 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* .gitignore
+* ic_launcher-web.png
+* log.txt
+* tabelleSarpaper.txt
+* target/
+* target/classes/
+* target/classes/com/
+* target/classes/com/example/
+* target/classes/com/example/arpacell/
+* target/classes/com/example/arpacell/Config.class
+* target/classes/com/example/arpacell/Connectivity.class
+* target/classes/com/example/arpacell/DataCall.class
+* target/classes/com/example/arpacell/DeviceType.class
+* target/classes/com/example/arpacell/EntryCall.class
+* target/classes/com/example/arpacell/Ftp.class
+* target/classes/com/example/arpacell/GlobalStatistics.class
+* target/classes/com/example/arpacell/GraphStatistic$1.class
+* target/classes/com/example/arpacell/GraphStatistic$2.class
+* target/classes/com/example/arpacell/GraphStatistic.class
+* target/classes/com/example/arpacell/MainActivity.class
+* target/classes/com/example/arpacell/MonFileManager$TtFile.class
+* target/classes/com/example/arpacell/MonFileManager.class
+* target/classes/com/example/arpacell/MonSrv$CheckSpeakerPhone.class
+* target/classes/com/example/arpacell/MonSrv$HandleBluetoothHeadset.class
+* target/classes/com/example/arpacell/MonSrv$HandleCallStateChange.class
+* target/classes/com/example/arpacell/MonSrv$HandleHeadset.class
+* target/classes/com/example/arpacell/MonSrv$HandleSignalChange.class
+* target/classes/com/example/arpacell/MonSrv$MonSrvBinder.class
+* target/classes/com/example/arpacell/MonSrv$TtFtp.class
+* target/classes/com/example/arpacell/MonSrv.class
+* target/classes/com/example/arpacell/MonSrvReport$1.class
+* target/classes/com/example/arpacell/MonSrvReport$2.class
+* target/classes/com/example/arpacell/MonSrvReport$StatisticsType.class
+* target/classes/com/example/arpacell/MonSrvReport.class
+* target/classes/com/example/arpacell/MonSrvStartReceiver.class
+* target/classes/com/example/arpacell/SignalRange.class
+* target/classes/com/example/arpacell/Statistics.class
+* target/classes/com/example/arpacell/TelephonyDemo$1.class
+* target/classes/com/example/arpacell/TelephonyDemo$2.class
+* target/classes/com/example/arpacell/TelephonyDemo$FetchData$1.class
+* target/classes/com/example/arpacell/TelephonyDemo$FetchData.class
+* target/classes/com/example/arpacell/TelephonyDemo.class
+* target/classes/com/example/arpacell/TestActivity.class
+* target/classes/com/example/arpacell/Utility.class
+* target/classes/com/example/arpacell/ViewStatistics.class
+* target/maven-status/
+* target/maven-status/maven-compiler-plugin/
+* target/maven-status/maven-compiler-plugin/compile/
+* target/maven-status/maven-compiler-plugin/compile/default-compile/
+* target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+* versionARPAcell/
+* versionARPAcell/ArpaCell_FREE.apk
+* versionARPAcell/ArpaCell_FTP.apk
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* libs/GraphView-3.1.1.jar => app/libs/GraphView-3.1.1.jar
+* libs/org.apache.commons.net_2.0.0.v200905272248.jar => app/libs/org.apache.commons.net_2.0.0.v200905272248.jar
+* lint.xml => app/lint.xml
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

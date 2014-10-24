@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccffcc"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FFFFBB33"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/arpalogo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#ccffcc"
+            android:gravity="left|right|center"
+            android:text="Questa app è stata realizzata da Arpa Piemonte nell&apos;ambito 
+            di un progetto finalizzato alla valutazione dell&apos;esposizione personale al telefono cellulare. Il progetto è stato finanziato dal Comitato Regionale per le Comunicazioni (CoReCom) del Piemonte."
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="0.10"
+            android:autoLink="web"
+            android:gravity="center_vertical|center"
+            
+			android:text="@string/link_progetti"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:autoLink="web"
+            android:gravity="center_vertical|center"
+            android:linksClickable="true"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</ScrollView>

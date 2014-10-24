@@ -1,0 +1,268 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/graphStat"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="1dp" >
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_weight="1"
+        android:background="#ccffcc"
+        android:text="       "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#000040"
+        android:text="       "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+   
+    <TextView
+        android:id="@+id/titgraph"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeffee"
+        android:gravity="center"
+        android:text="STATISTICHE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000040"
+        android:textColorLink="#ffffff"
+        android:textSize="24sp" />
+
+   
+    <TextView
+        android:id="@+id/titgraphperiod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#eeffee"
+        android:gravity="center"
+        android:text="Dati dal 12llll/12/12 a oggi"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000040"
+        android:textColorLink="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ccffcc"
+        android:text="       "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TableRow
+            android:id="@+id/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/titgraph1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000040"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Dati dal 12/12/12 a oggi"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textColorLink="#ffffff"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/g1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000040" >
+
+            <LinearLayout
+                android:id="@+id/graph1"
+                android:layout_width="fill_parent"
+                android:layout_height="250dip"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/f1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/assexg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000040"
+                    android:text="        "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labtotdev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#009900"
+                    android:gravity="center"
+                    android:text="h 35:20:35"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textColorLink="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labtotnodev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#990000"
+                    android:gravity="center"
+                    android:text="h 35:20:35"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ccffcc"
+        android:text="       "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TableRow
+            android:id="@+id/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/titgraph2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000040"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Dati dal 12/12/12 a oggi"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textColorLink="#ffffff"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/g2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000040"
+            android:padding="1dp" >
+
+            <LinearLayout
+                android:id="@+id/graph2"
+                android:layout_width="fill_parent"
+                android:layout_height="250dip"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/f2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/assexg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000040"
+                    android:text="        "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labtotL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF8400"
+                    android:gravity="center"
+                    android:text="h 35:20:35"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textColorLink="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labtotM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#aa0000"
+                    android:gravity="center"
+                    android:text="h 35:20:35"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/labtotH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#9200A6"
+                    android:gravity="center"
+                    android:text="h 35:20:35"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableRow>
+        
+    </TableLayout>
+
+         <TextView
+             android:layout_width="fill_parent"
+             android:layout_height="3dp"
+             android:layout_weight="1"
+             android:background="#000040"
+             android:text="."
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#000040" />
+
+</LinearLayout>

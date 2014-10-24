@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eeffee"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/arpalogo" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Statistiche SARPAPER"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+
+ 
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:text="       "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eeffee"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <LinearLayout
+                android:id="@+id/lg1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#eeffee"
+                android:text="       "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/lg2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#eeffee"
+                android:text="       "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/lg3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#eeffee"
+                android:text="       "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/lg4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#eeffee"
+                android:text="       "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/lg5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#eeffee"
+                android:text="       "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/lg6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:padding="1dp" 
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
