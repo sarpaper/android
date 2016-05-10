@@ -31,6 +31,9 @@ import com.example.arpacell.R;
 
 import it.piemonte.arpa.sarpaper.models.GraphStatistic;
 
+/**
+ * Activity per la visualizzazione delle statistiche in formato grafico
+ */
 public class ViewStatistics extends Activity {
 
 	LinearLayout lg1,lg2,lg3,lg4,lg5,lg6;

@@ -135,6 +135,11 @@ public class MonSrvReport {
 		return lastCall;
 	}
 
+	/**
+	 * Aggiorna le statistiche con i dati dell'ultima chiamata
+	 * Il servizio in background chiama questo metodo al termine di una chiamata
+	 * @param lastCall ultima chiamata effettuata
+     */
 	public void setLastCall(EntryCall lastCall) {
 		this.lastCall = lastCall;
 		lastCallStatistics = new Statistics();
@@ -241,6 +246,11 @@ public class MonSrvReport {
 		addLog(log);
 	}
 
+	/**
+	 * Tempo di updatime del servizio in giorni, ore, minuti e secondi
+	 * @param start
+	 * @return
+     */
 	private String calcUptime(Date start) {
 		String result = "";
 		try {
@@ -269,6 +279,7 @@ public class MonSrvReport {
 		return result;
 	}
 
+
 	private void updateDayStatistics(EntryCall lastCall) {
 		Date callDate = removeTimeFromDate(lastCall.getStartCall());
 		if (isStatPresent(StatisticsType.DAY_STAT)) {
@@ -289,6 +300,10 @@ public class MonSrvReport {
 		storeStat(StatisticsType.DAY_STAT);
 	}
 
+	/**
+	 * Serializza su file il tipo di statistica indicata in formato binario
+	 * @param type
+	 */
 	private void storeStat(StatisticsType type) {
 
 		File root = Environment.getExternalStorageDirectory();
@@ -326,7 +341,11 @@ public class MonSrvReport {
 		}
 
 	}
-	
+
+	/**
+	 * Serializza su file il tipo di statistica indicata in formato json
+	 * @param type
+     */
 	private void storeStatJson(StatisticsType type) {
 
 		File root = Environment.getExternalStorageDirectory();
@@ -368,6 +387,9 @@ public class MonSrvReport {
 
 	}
 
+	/**
+	 * Le statistiche giornaliere vengono mantenute per 30 gg
+	 */
 	private void resizeDayStatistics() {
 		if (dayStatistics == null)
 			return;
@@ -395,6 +417,10 @@ public class MonSrvReport {
 		}
 	}
 
+	/**
+	 * Restore in memoria del tipo di statistica indicato da file (Deserializzazione degli oggetti da formato json)
+	 * @param type
+     */
 	private void restoreStatJson(StatisticsType type) {
 
 		if (isStatPresent(type)) {// //crea file .dat
@@ -455,7 +481,12 @@ public class MonSrvReport {
 		}
 
 	}
-@SuppressWarnings("unchecked")
+
+	/**
+	 * Restore in memoria del tipo di statistica indicato da file (Deserializzazione degli oggetti da formato binario)
+	 * @param type
+     */
+    @SuppressWarnings("unchecked")
 	private void restoreStat(StatisticsType type) {
 
 		if (isStatPresent(type)) {// //crea file .dat
@@ -503,6 +534,12 @@ public class MonSrvReport {
 		}
 
 	}
+
+	/**
+	 * Verifica se esiste un salvataggio su file per il tipo di statistica indicata
+	 * @param type tipo di statistica
+	 * @return
+     */
 	private boolean isStatPresent(StatisticsType type) {
 
 		File root = Environment.getExternalStorageDirectory();
@@ -533,6 +570,12 @@ public class MonSrvReport {
 		return new Date(Date.parse(d));
 	}
 
+	/**
+	 * Unisce le statistiche per un certo periodo
+	 * @param start giorno inizio periodo
+	 * @param end giorno fine periodo
+     * @return statistiche aggregate nel periodo
+     */
 	public Statistics joinDayStatistics(Date start, Date end) {
 		restoreStat(StatisticsType.DAY_STAT);
 		Statistics result = new Statistics();

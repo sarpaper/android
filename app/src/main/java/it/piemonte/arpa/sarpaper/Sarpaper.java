@@ -102,6 +102,7 @@ public class Sarpaper extends Activity {
 		bactiveUI = true;
 		bindService(new Intent(this, MonSrv.class), mConnection,
 				Context.BIND_AUTO_CREATE);
+		//ogni 4 secondi aggiorna i dati dell'interfaccia
 		timer = new Timer();
 		timer.scheduleAtFixedRate(new FetchData(), 1000, 4000);
 
@@ -120,6 +121,9 @@ public class Sarpaper extends Activity {
 		}
 	};
 
+	/**
+	 * Richiede al servizio le statistiche ed aggiorna l'interfaccia
+	 */
 	class FetchData extends TimerTask {
 		@Override
 		public void run() {
@@ -129,7 +133,6 @@ public class Sarpaper extends Activity {
 						MonSrvReport rpt = monSrv.getMonSrvReport();
 						start = new Date(rpt.getGlobalStatistics().getStarttime());
 						datastart = start.toLocaleString();
-
 						updateGUI(rpt);
 						updateChartTot(rpt, start);
 					}
@@ -222,7 +225,11 @@ public class Sarpaper extends Activity {
 	}
 
 
-
+	/**
+	 * Presenta a video le statistiche in forma grafica
+	 * @param rpt
+	 * @param start
+     */
 	private void updateChartTot(MonSrvReport rpt, Date start) {
 		try {
 			// verifica dati con o senza device uguali , ne segue no refresh grafici e return
@@ -250,6 +257,10 @@ public class Sarpaper extends Activity {
 
 	}
 
+	/**
+	 * Presenta a video le statistiche
+	 * @param rpt
+     */
 	private void updateGUI(MonSrvReport rpt) {
 		try {
 			if (rpt != null && bactiveUI) {
