@@ -17,7 +17,13 @@ package it.piemonte.arpa.sarpaper.models;
  *
  *    You should have received a copy of the GNU General Public License
  *    along with this software.  If not, see <http://www.gnu.org/licenses/>.
- */public class DataCall {
+ */
+
+
+/**
+ * Rappresenta lo stato di chiamata vocale in base alla terna di valori dei parametri monitorati: type, signal, device
+ */
+public class DataCall {
 
 	private int type, signal;
 	private int seconds;
@@ -96,12 +102,6 @@ package it.piemonte.arpa.sarpaper.models;
 		if (type != other.type)
 			return false;
 		return true;
-	}
-
-	public String[] getGUICurrent() {
-
-		return new String[] { this.getNote(), String.valueOf(this.getSignal()),
-				this.device.name() };
 	}
 
 	public String getGUIDescription() {

@@ -17,6 +17,9 @@
  *    along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */package it.piemonte.arpa.sarpaper.models;
 
+/**
+ * Modalità di utilizzo
+ */
 public enum DeviceType {
 	NO_DEVICE,VIVA_VOCE,CUFFIE
 }

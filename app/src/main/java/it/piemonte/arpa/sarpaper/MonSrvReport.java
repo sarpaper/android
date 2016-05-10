@@ -51,6 +51,9 @@ import it.piemonte.arpa.sarpaper.models.Statistics;
 import it.piemonte.arpa.sarpaper.services.MonSrv;
 import it.piemonte.arpa.sarpaper.utilities.Config;
 
+/**
+ * Gestione Statiche giornaliere, globali e ultima chiamata
+ */
 public class MonSrvReport {
 
 	private enum StatisticsType {

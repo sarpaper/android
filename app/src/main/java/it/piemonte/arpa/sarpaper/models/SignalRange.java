@@ -17,6 +17,10 @@
  *    along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */package it.piemonte.arpa.sarpaper.models;
 
+
+/**
+ * Classi di esposizione
+ */
 public enum SignalRange {
 	LOW(-64),MEDIUM(-65),HIGH(-90);	
 	private int value;

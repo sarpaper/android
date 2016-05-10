@@ -46,6 +46,10 @@ import it.piemonte.arpa.sarpaper.models.DataCall;
 import it.piemonte.arpa.sarpaper.models.DeviceType;
 import it.piemonte.arpa.sarpaper.models.EntryCall;
 
+/**
+ * Monitora il traffico voce
+ * Servizio in background, avviato in automatico all'accensione del telefono
+ */
 public class MonSrv extends Service {
 
 	private final IBinder mBinder = new MonSrvBinder();
@@ -83,17 +87,17 @@ public class MonSrv extends Service {
 		// Get the telephony manager
 		telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
-		// Register the listener wit the telephony manager
+		//Listener chiamate vocali, intercetta le varie fasi di una chiamata
 		telephonyManager.listen(new HandleCallStateChange(),
 				PhoneStateListener.LISTEN_CALL_STATE);
+		//Listener cambiamento ricezione segnale
 		telephonyManager.listen(new HandleSignalChange(),
 				PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
-
-		// headset listener
+		//Listener utilizzo auricolari
 		IntentFilter headsetFilter = new IntentFilter(
 				Intent.ACTION_HEADSET_PLUG);
 		cntx.registerReceiver(new HandleHeadset(), headsetFilter);
-		// bluetooth headset listener
+		//Listener utilizzo vivavoce
 		IntentFilter btHeadsetFilter = new IntentFilter(
 				BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED);
 		cntx.registerReceiver(new HandleBluetoothHeadset(), btHeadsetFilter);
@@ -122,6 +126,7 @@ public class MonSrv extends Service {
 		try {
 			tipo = Connectivity.getNetworkInfo(cntx).getSubtype();
 		} catch (Exception e) {
+			//ignored
 		}
 		return tipo;
 	}
@@ -161,6 +166,7 @@ public class MonSrv extends Service {
 					tCheckSpeakerPhone.cancel();
 					tCheckSpeakerPhone = null;
 				}
+				//Chiusura chiamata, aggiornamento statistiche e scrittura file da inviare
 				if (entryCall != null) {
 					entryCall.finish();
 					Log.d("MonSrv", entryCall.toString());
@@ -180,8 +186,7 @@ public class MonSrv extends Service {
 				bHeadSet = audioManager.isWiredHeadsetOn() ? (byte) 1
 						: (byte) 0;
 
-				// creo oggetto EntryCall e primo record nella lista
-				// dataCalls
+				//Nuova chiamata
 				data = new DataCall(getCurType(), curSignal, getCurDevice(),
 						Connectivity.whatConnection(cntx));
 				entryCall = new EntryCall(data);
@@ -214,6 +219,7 @@ public class MonSrv extends Service {
 						.getGsmSignalStrength() * 2 - 113 : 99;
 			else
 				curSignal = signalStrength.getCdmaDbm();
+			//Aggiornamento chiamata e statistiche correnti
 			if (entryCall != null) {
 				data = new DataCall(getCurType(), curSignal, getCurDevice(),
 						tipo);
@@ -243,6 +249,8 @@ public class MonSrv extends Service {
 						"headsetManager: " + intent.getIntExtra("state", 99));
 				bHeadSet = (byte) intent.getIntExtra("state", 99);
 				String tipo = Connectivity.whatConnection(cntx);
+
+				//Aggiornamento chiamata e statistiche correnti
 				if (entryCall != null) {
 					data = new DataCall(getCurType(), curSignal,
 							getCurDevice(), tipo);
@@ -278,6 +286,7 @@ public class MonSrv extends Service {
 				bHeadSet = 0;
 			}
 			String tipo = Connectivity.whatConnection(cntx);
+			//Aggiornamento chiamata e statistiche correnti
 			if (entryCall != null) {
 				data = new DataCall(getCurType(), curSignal, getCurDevice(),
 						tipo);
@@ -296,7 +305,7 @@ public class MonSrv extends Service {
 	 */
 
 	/*
-	 * Send call report files with FTP is network available
+	 * Spedisce i file con i dati delle chiamate via ftp se la rete è disponibile
 	 */
 	class TtFtp extends TimerTask {
 
@@ -354,6 +363,7 @@ public class MonSrv extends Service {
 
 			String tipo = Connectivity.whatConnection(cntx);
 			bSpeakerPhone = newValue;
+			//Aggiornamento chiamata e statistiche correnti
 			if (entryCall != null) {
 				data = new DataCall(getCurType(), curSignal, getCurDevice(),
 						tipo);

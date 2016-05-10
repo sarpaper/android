@@ -19,6 +19,9 @@
 
 import java.io.Serializable;
 
+/**
+ * Rappresenta le statistiche di utilizzo
+ */
 public class Statistics implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -59,6 +62,10 @@ public class Statistics implements Serializable {
 		return highExp;
 	}
 
+	/**
+	 * Aggiorna le statiche con i dati della chiamata effettuata
+	 * @param entry chiamata effettuata
+     */
 	public void update(EntryCall entry) {
 		this.numCalls++;
 		this.totalTime += entry.getCallDuration();
@@ -74,6 +81,10 @@ public class Statistics implements Serializable {
 
 	}
 
+	/**
+	 * Unisce i dati statistici ricevuti come parametro
+	 * @param stat
+     */
 	public void plus(Statistics stat) {
 		this.numCalls += stat.numCalls;
 		this.totalTime += stat.getTotalTime();
