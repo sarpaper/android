@@ -23,7 +23,7 @@ public class Utility {
 	public static String getHMSTime(long time) {
 		long diffSeconds = time % 60;
 		long diffMinutes = time / 60 % 60;
-		long diffHours = time / (60 * 60) % 24;
+		long diffHours = time / (60 * 60);
 		String testo;
 		testo = (diffHours < 10 ? "0" + String.valueOf(diffHours) : String
 				.valueOf(diffHours));
