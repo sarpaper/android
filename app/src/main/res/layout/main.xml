@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="ATTIVAZIONE SERVIZIO"
+                    android:text="@string/titAttService"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#ffffff" />
             </TableRow>
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="ULTIMI VALORI RILEVATI"
+                    android:text="@string/titLastData"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#ffffff" />
             </TableRow>
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="Rete"
+                    android:text="@string/titRete"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="loading..."
+                    android:text="@string/loading"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="dBm segnale"
+                    android:text="@string/dbm_segnale"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="Speaker"
+                    android:text="@string/speaker"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:gravity="center"
-                    android:text="DATI GENERALI"
+                    android:text="@string/titDatiGenerali"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#ffffff" />
             </TableRow>
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="N° chiamate"
+                    android:text="@string/titNChiamate"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -186,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="Durata chiamate"
+                    android:text="@string/titDurataChiamate"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -208,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#eeffee"
-                    android:text="Tempo servizio"
+                    android:text="@string/titTempoServizio"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -280,7 +280,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:gravity="center_horizontal"
-            android:text="Report Ultima Chiamata"
+            android:text=""
             android:textAppearance="?android:attr/textAppearanceMedium"
              
              

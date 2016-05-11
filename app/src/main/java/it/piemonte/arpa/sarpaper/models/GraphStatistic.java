@@ -55,7 +55,7 @@ public class GraphStatistic extends LinearLayout {
 
 		titgraph.setText(tit);
 		titgraphperiod.setText(titperiod);
-		titgraph1.setText("Ausilio di Auricolare/Vivavoce");
+		titgraph1.setText(R.string.titGraphStat);
 		long tdev = stat.getDeviceTime();
 		long tnodev = stat.getNoDeviceTime();
 		// testi
@@ -81,7 +81,7 @@ public class GraphStatistic extends LinearLayout {
 		float f2 = (float) tnodev / (tnodev + tdev) * 100;
 		long v1 = Math.round(f1);
 		long v2 = Math.round(f2);
-		GraphViewSeries s1 = new GraphViewSeries("con-senza", seriesStyle,
+		GraphViewSeries s1 = new GraphViewSeries(getContext().getString(R.string.with), seriesStyle,
 				new GraphViewData[] { new GraphViewData(1, v1),
 						new GraphViewData(2, v2)
 

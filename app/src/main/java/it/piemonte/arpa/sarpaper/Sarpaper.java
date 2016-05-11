@@ -193,10 +193,10 @@ public class Sarpaper extends Activity {
 	private void esci() {
 		new AlertDialog.Builder(this)
 				.setIcon(android.R.drawable.ic_dialog_alert)
-				.setTitle("Chiusura SARPAPER")
+				.setTitle(R.string.titChiusuraApp)
 				.setMessage(
-						"Sei sicuro di voler chiudere l'applicazione?\nSi chiudera' anche il servizio di monitoring SARPAPER.")
-				.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+						R.string.msgChiusuraApp)
+				.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 
 					public void onClick(DialogInterface dialog, int which) {
 
@@ -207,7 +207,7 @@ public class Sarpaper extends Activity {
 
 					}
 
-				}).setNegativeButton("Non esco", null).show();
+				}).setNegativeButton(R.string.noExit, null).show();
 	}
 
 	@Override
@@ -242,10 +242,10 @@ public class Sarpaper extends Activity {
 
 			}
 			// creo grafico
-			GraphStatistic graphstat = new GraphStatistic(this, rpt.getGlobalStatistics(),"STATISTICHE TOTALI", "Dall'attivazione a oggi");
+			GraphStatistic graphstat = new GraphStatistic(this, rpt.getGlobalStatistics(),getString(R.string.titStatGlobal), getString(R.string.subTitStatGlobal));
 			llgrah.removeAllViews();
 			llgrah.addView(graphstat);
-			GraphStatistic graphstatlastcall = new GraphStatistic(this, rpt.getLastCallStatistics(),"STATISTICHE", "Ultima chiamata effettuata");
+			GraphStatistic graphstatlastcall = new GraphStatistic(this, rpt.getLastCallStatistics(),getString(R.string.titStat), getString(R.string.subTitStatLatsCall));
 			llgrahlastcall.removeAllViews();
 			llgrahlastcall.addView(graphstatlastcall);
 
@@ -297,7 +297,7 @@ public class Sarpaper extends Activity {
 
 			result.append(item.getGUIDescription());
 		}
-		tvlastcall.setText("Report Ultima Chiamata\n\n" +result);
+		tvlastcall.setText(statmonsrv.getString(R.string.titLastCall) +result);
 
 	}
 
