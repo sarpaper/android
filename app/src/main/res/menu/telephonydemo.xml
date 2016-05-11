@@ -7,7 +7,7 @@
     <item
         android:id="@+id/esci"
         android:orderInCategory="200"
-        android:title="Chiudi ArpaCell" android:titleCondensed="Chiudi"/>
+        android:title="Chiudi ArpaCell" android:titleCondensed="@string/cmdClose"/>
     <item android:id="@+id/vstat" android:titleCondensed="Stats" android:orderInCategory="50" android:title="Statistiche"></item>
 
 </menu>

@@ -41,5 +41,6 @@
  <string name="TitScorsaSettimana">LAST WEEK</string>
  <string name="TitQuestoMese">THIS MONTH</string>
  <string name="TitScorsoMese">LAST MONTH</string>
+ <string name="cmdClose">Close</string>
 
 </resources>

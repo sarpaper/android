@@ -42,4 +42,5 @@
  <string name="TitScorsaSettimana">Scorsa SETTIMANA</string>
  <string name="TitQuestoMese">Questo MESE</string>
  <string name="TitScorsoMese">Scorso MESE</string>
+ <string name="cmdClose">Chiudi</string>
 </resources>
