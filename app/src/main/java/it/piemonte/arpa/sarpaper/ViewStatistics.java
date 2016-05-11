@@ -83,21 +83,21 @@ public class ViewStatistics extends Activity {
 			calendar.add(Calendar.DATE, 0);
 			dateFrom = calendar.getTime();
 			dateTo=dateFrom;
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"OGGI",	"1 giornata "+ sdf.format(dateFrom));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitOggi),	getString(R.string.TitUnaGiornata)+ sdf.format(dateFrom));
 			lg1.addView(graphstat);
 			//ieri
 			calendar.setTime(new Date());
 			calendar.add(Calendar.DATE, -1);
 			dateFrom = calendar.getTime();
 			dateTo=dateFrom;
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"IERI",	"1 giornata "+ sdf.format(dateFrom));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitIeri),	getString(R.string.TitUnaGiornata)+ sdf.format(dateFrom));
 			lg2.addView(graphstat);
 			//settimana
 			calendar.setTime(new Date());
 			calendar.add(Calendar.DATE, -7);
 			dateFrom = calendar.getTime();
 			dateTo=new Date();
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"Questa SETTIMANA",	" "+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitQuestaSettimana),	" "+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
 			lg3.addView(graphstat);
 			//2 settimane fa 
 			calendar.setTime(new Date());
@@ -105,7 +105,7 @@ public class ViewStatistics extends Activity {
 			dateTo = calendar.getTime();
 			calendar.add(Calendar.DATE, -7);
 			dateFrom=calendar.getTime();
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"Scorsa SETTIMANA",	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitScorsaSettimana),	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
 			lg4.addView(graphstat);
 			
 			//mese  
@@ -114,7 +114,7 @@ public class ViewStatistics extends Activity {
 			dateTo = calendar.getTime();
 			calendar.add(Calendar.MONTH, -1);
 			dateFrom=calendar.getTime();
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"Questo MESE",	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitQuestoMese),	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
 			lg5.addView(graphstat);
 			//mese scorso  
 			calendar.setTime(new Date());
@@ -122,7 +122,7 @@ public class ViewStatistics extends Activity {
 			dateTo = calendar.getTime();
 			calendar.add(Calendar.MONTH, -1);
 			dateFrom=calendar.getTime();
-			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),"Scorso MESE",	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
+			graphstat = new GraphStatistic(this, rpt.joinDayStatistics(dateFrom,dateTo),getString(R.string.TitScorsoMese),	""+ sdf.format(dateFrom)+" - " + sdf.format(dateTo));
 			lg6.addView(graphstat);
 			
 			

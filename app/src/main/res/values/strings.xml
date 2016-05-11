@@ -28,4 +28,18 @@
     <string name="titTempoServizio">Tempo servizio</string>
     <string name="titGraphStat">Ausilio di Auricolare/Vivavoce</string>
     <string name="with">con-senza</string>
+    <string name="TitDatiPerc">Dati in %</string>
+    <string name="TitEspoNodev">Esposizione SENZA ausili</string>
+    <string name="TitBassa">BASSA</string>
+    <string name="TitMedia">MEDIA</string>
+    <string name="TitAlta">ALTA</string>
+    <string name="TitCon">CON</string>
+    <string name="TitSenza">SENZA</string>
+ <string name="TitOggi">OGGI</string>
+ <string name="TitIeri">IERI</string>
+ <string name="TitUnaGiornata">"1 giornata "</string>
+ <string name="TitQuestaSettimana">Questa SETTIMANA</string>
+ <string name="TitScorsaSettimana">Scorsa SETTIMANA</string>
+ <string name="TitQuestoMese">Questo MESE</string>
+ <string name="TitScorsoMese">Scorso MESE</string>
 </resources>

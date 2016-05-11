@@ -8,7 +8,7 @@
     <string name="title_activity_view_statistics">Statistics</string>
    <string name="link_progetti">http://www.arpa.piemonte.it/approfondimenti/temi-ambientali/campi-elettromagnetici/cem/progetti</string>
     <string name="titChiusuraApp">Close SARPAPER</string>
-    <string name="msgChiusuraApp">Are you sure closing SARPAPER.</string>
+    <string name="msgChiusuraApp">CLOSING SARPAPER. Are you sure?</string>
     <string name="yes">Yes</string>
     <string name="noExit">No thanks</string>
     <string name="titStatGlobal">Global Statistics</string>
@@ -26,4 +26,20 @@
     <string name="titNChiamate"># Calls</string>
     <string name="titDurataChiamate">Total calls time</string>
     <string name="titTempoServizio">Service running </string>
+    <string name="TitDatiPerc">% Data</string>
+    <string name="TitEspoNodev">NO Device Auxilium</string>
+    <string name="TitBassa">LOW</string>
+    <string name="TitMedia">MEDIUM</string>
+    <string name="TitAlta">HIGH</string>
+    <string name="TitCon">WITH</string>
+    <string name="TitSenza">WITHOUT</string>
+ <string name="titGraphStat">Speakerphone Headset</string>
+ <string name="TitOggi">TODAY</string>
+ <string name="TitIeri">YESTERDAY</string>
+ <string name="TitUnaGiornata">"1 day "</string>
+ <string name="TitQuestaSettimana">THIS WEEK</string>
+ <string name="TitScorsaSettimana">LAST WEEK</string>
+ <string name="TitQuestoMese">THIS MONTH</string>
+ <string name="TitScorsoMese">LAST MONTH</string>
+
 </resources>

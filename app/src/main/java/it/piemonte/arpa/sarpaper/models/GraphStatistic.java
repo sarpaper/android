@@ -88,11 +88,11 @@ public class GraphStatistic extends LinearLayout {
 				});
 		// creazione obj grafico barre
 		GraphView graphView;
-		graphView = new BarGraphView(context, "Dati in %");
+		graphView = new BarGraphView(context, getContext().getString(R.string.TitDatiPerc));
 		((BarGraphView) graphView).setDrawValuesOnTop(true);
 
 		graphView.addSeries(s1); // data
-		graphView.setHorizontalLabels(new String[] { "CON", "SENZA" });
+		graphView.setHorizontalLabels(new String[] { getContext().getString(R.string.TitCon), getContext().getString(R.string.TitSenza) });
 		graphView
 				.setVerticalLabels(new String[] { "100", "75", "50", "25", "0" });
 		graphView.setManualYAxisBounds(100d, 0d);
@@ -108,7 +108,7 @@ public class GraphStatistic extends LinearLayout {
 
 		// graph2
 
-		titgraph2.setText("Esposizione SENZA ausili");
+		titgraph2.setText(R.string.TitEspoNodev);
 
 		long tL = stat.getLowExp();
 		long tM = stat.getMediumExp();
@@ -147,12 +147,12 @@ public class GraphStatistic extends LinearLayout {
 				});
 		// creazione obj grafico barre
 		GraphView graphViewExp;
-		graphViewExp = new BarGraphView(context, "Dati in %");
+		graphViewExp = new BarGraphView(context, getContext().getString(R.string.TitDatiPerc));
 		((BarGraphView) graphViewExp).setDrawValuesOnTop(true);
 
 		graphViewExp.addSeries(s2); // data
-		graphViewExp.setHorizontalLabels(new String[] { "BASSA", "MEDIA",
-				"ALTA" });
+		graphViewExp.setHorizontalLabels(new String[] { getContext().getString(R.string.TitBassa), getContext().getString(R.string.TitMedia),
+				getContext().getString(R.string.TitAlta) });
 		graphView
 				.setVerticalLabels(new String[] { "100", "75", "50", "25", "0" });
 		graphViewExp.setManualYAxisBounds(100d, 0d);
