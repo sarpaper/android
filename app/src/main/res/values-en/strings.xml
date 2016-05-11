@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SarPaper 1.0 FTP</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world"></string>
+    <string name="title_activity_telephony_demo">SarPaper 1.0 FTP</string>
+    <string name="title_activity_view_statistics">Statistics</string>
+   <string name="link_progetti">http://www.arpa.piemonte.it/approfondimenti/temi-ambientali/campi-elettromagnetici/cem/progetti</string>
+    <string name="titChiusuraApp">Close SARPAPER</string>
+    <string name="msgChiusuraApp">Are you sure closing SARPAPER.</string>
+    <string name="yes">Yes</string>
+    <string name="noExit">No thanks</string>
+    <string name="titStatGlobal">Global Statistics</string>
+    <string name="subTitStatGlobal">from attivation to now</string>
+    <string name="titStat">STATISTISTICS</string>
+    <string name="subTitStatLatsCall">Last call</string>
+    <string name="titLastCall">Report Last Call\n\n</string>
+    <string name="titAttService">SERVICE ACTIVATION</string>
+    <string name="titLastData">LATEST DATA </string>
+    <string name="titRete">Network</string>
+    <string name="loading">loading...</string>
+    <string name="dbm_segnale">dBm signal</string>
+    <string name="speaker">Speaker</string>
+    <string name="titDatiGenerali">GLOBAL DATA</string>
+    <string name="titNChiamate"># Calls</string>
+    <string name="titDurataChiamate">Total calls time</string>
+    <string name="titTempoServizio">Service running </string>
+</resources>
